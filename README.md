@@ -1,47 +1,49 @@
-**Title:** Global Pandemic History Analysis using SQL
+**Title:** Gaming Behavior & Productivity Analysis using SQL
 
-**Project Overview**
-This project features a comprehensive historical analysis of global pandemics and health crises using SQL. It explores a dataset covering centuries of medical history to identify patterns in mortality, transmission methods, and the economic impact of major outbreaks. The repository includes the raw data, schema definitions, and a suite of analytical queries designed to extract meaningful insights from complex historical records.
+**Project Overview:**
+This project explores the relationship between gaming habits, lifestyle factors, and productivity. Using a dataset of 1,000 unique users, the analysis investigates how daily gaming hours impact stress levels, sleep patterns, and academic or professional performance. The project demonstrates advanced SQL techniques for data cleaning, type casting, and multi-dimensional analysis to derive insights into the "Performance Impact" of digital entertainment.
 
 **Key Features**
-**Mortality & Scale Analysis:** Queries to identify the deadliest events in human history and calculate Case Fatality Rates (CFR).
+**Data Sanitization & Type Casting:** Converted raw text-based data into precise numerical formats (INT, DECIMAL) for accurate mathematical computation.
 
-**Pathogen Profiling:** Aggregated data analysis by pathogen type (Virus, Bacteria, etc.) to determine which biological agents have had the highest impact.
+**Missing Data Reporting:** Implemented custom logic to identify and report "whitespace" blanks and NULL values across all attributes.
 
-**Temporal Trends:** Century-over-century event tracking to visualize the frequency of outbreaks over time.
+**Correlation Analysis:** Queried the relationship between high gaming volume and elevated stress levels.
 
-**Socio-Economic Insights:** Evaluation of economic damage in relation to medical breakthroughs and containment strategies.
+**Productivity Profiling:** Analyzed gaming time preferences (Morning, Evening, Night) against work/academic scores to identify peak performance windows.
 
-**Geographic Spread:** Analysis of how diseases moved across regions and continents.
+**Behavioral Segmentation:** Grouped data by Occupation and Game Type to identify which demographics are most susceptible to negative performance impacts.
 
 **Technical Methodology**
-The analysis was performed using a structured SQL approach:
+The project follows a structured SQL workflow:
 
-**Data Aggregation:** Used GROUP BY and aggregate functions (SUM, AVG, COUNT) to summarize impact by century and pathogen.
+**Schema Definition:** Built a robust table structure to handle diverse data types.
 
-**Data Filtering:** Applied complex WHERE and HAVING clauses to isolate high-impact events (e.g., duration > 10 years or CFR > 30%).
+**Data Cleaning:** Used SQL_SAFE_UPDATES and TRIM functions to handle data entry errors and standardize gender/occupation labels.
 
-**Sorting & Ranking:** Utilized ORDER BY and LIMIT to rank the most catastrophic events based on mortality and economic cost.
+**Aggregation:** Leveraged GROUP BY and AVG functions to find trends across different game genres (Action, Strategy, Puzzle, etc.).
+
+**Logical Filtering:** Used CASE WHEN statements to generate comprehensive data health reports.
 
 **Analytical Insights**
 The SQL scripts included in this repository answer critical questions such as:
 
-What are the top 5 deadliest pandemics in history?
+Which game types are associated with the highest daily gaming hours?
 
-Which pathogen type has caused the highest total number of estimated deaths?
+Do users who game primarily at night suffer from lower productivity scores?
 
-How does a medical breakthrough correlate with the average economic impact of an event?
+Is there a statistically significant correlation between sleep hours and gaming frequency?
 
-Which transmission methods (Airborne, Vector, etc.) are most frequently associated with global pandemics?
+How do stress levels fluctuate between students and working professionals based on their gaming habits?
 
 **Repository Structure**
-**pandamic.csv: **The primary dataset containing historical records of global health events.
+gaming.csv: The raw dataset containing user-reported gaming and lifestyle statistics.
 
-**pandemic.sql:** The SQL script containing the database schema and analytical queries.
+gaming.sql: The complete SQL script including database setup, data cleaning, and analytical queries.
 
-Tech Stack
-**Database:** MySQL / PostgreSQL
+**Tools used**
+**Database:** MySQL
 
 **Language:** SQL
 
-**Tools:** Data Import/Export, Relational Database Management Systems (RDBMS)
+**Techniques:** Data Cleaning, Feature Transformation, Statistical Aggregation
